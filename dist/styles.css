@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#header_container{
+    position: fixed;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-areas: "restaurant_name . . . . . . . tab1 tab2 tab3";
+    z-index: 1;
+    position: relative;
+
+}
+
+#restaurant_name{
+    opacity: 0.8;
+    text-align: left;
+    font-size: 30;
+    color: white;
+    grid-area: restaurant_name;
+    align-self: end;
+
+}
+
+.tab{
+    opacity: 0.8;
+    text-align: left;
+    font-size: 15;
+    color: white;
+    align-self: end;
+}
+.tab:hover{
+    opacity: 1;
+    color: rgb(241, 241, 137);
+}
+
+
+#tab1{
+    grid-area: tab1;
+}
+#tab2{
+    grid-area: tab2;
+}
+#tab3{
+    grid-area: tab3;
+}
+
+.mainbodyimage{
+    position: absolute;
+    object-fit: cover;
+    max-width: 100%;
+    z-index: 0;
+}
+
+#aboutus{
+    color: white;
+    background-color: red;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1cec8;
+    height: 1em;
+}
