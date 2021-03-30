@@ -27,7 +27,7 @@ function load_initial_page(){
     }
     create_tab('tab1', 'MENU');
     create_tab('tab2', 'CONTACT');
-    create_tab('tab3', 'EVENTS');
+    create_tab('tab3', 'RESERVATIONS');
 
     // add slogan text
     let slogan = document.createElement('div');
@@ -110,8 +110,29 @@ function load_initial_page(){
     let footerImage = document.createElement('img');
     footerImage.src = "./assets/man-with-tattooed-hands-prepping-food.jpg";
     footerImage.classList.add("mainbodyimage");
-    footerImage.setAttribute('id','footerimage');
     contentBody.appendChild(footerImage);
+
+
+    // create contact us container and children
+    let contact_container = document.createElement('div');
+    contact_container.setAttribute('id','contact_container');
+    contentBody.appendChild(contact_container);
+
+    // function to create each contact child
+    function createContactDiv(city, street, state, zipcode, phoneNumber){
+        let contact = document.createElement('div');
+        contact.setAttribute('class', 'contact_text');
+        contact.innerHTML = city + '\n' + street + '\n' + city + ', ' + state + ', ' + zipcode + '\n' + phoneNumber;
+        contact_container.appendChild(contact);
+    }
+    createContactDiv('Brookyln', '1054 Anmoore Road', 'NY', '11201', '(718) 797-7239');
+    createContactDiv('Denver', '899 Davis Lane', 'CO', '80203', '(720) 263-4947');
+    createContactDiv('Seattle', '1392 Elliot Avenue','WA','98122','(206) 568-1365');
+
+    let hours = document.createElement('div');
+    hours.setAttribute('class', 'contact_text');
+    hours.innerHTML = 'Monday - Thursday:' + '\n' + '8am - 11pm' + '\n' + 'Friday - Sunday' + '\n' + '11am - 11pm';
+    contact_container.appendChild(hours);
 };
 
 

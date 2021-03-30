@@ -96,6 +96,20 @@ body{
     padding-top: 5vw;
 }
 
-#footerimage{
-    
+#contact_container{
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 2vw;
+    z-index: 1;
+    position: relative;
+    font-size: 1.5vw;
+    display: grid;
+    text-align: left;
+    grid-template-columns: auto auto auto auto;
+    color: #eee;
+}
+
+.contact_text{
+    white-space: pre-line;
+    padding-left: 5vw;
 }
