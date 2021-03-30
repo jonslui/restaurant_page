@@ -1,13 +1,13 @@
 body{
+    background-color: #eee;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
 #header_container{
     background-color: rgba(0, 0, 0, 0.1);
-
     position: fixed;
-    padding-top: 10px;
+    padding-top: 1vw;
     /* padding-left: 10px; */
     display: grid;
     grid-template-areas: "restaurant_name . . . . . . . tab1 tab2 tab3";
@@ -17,7 +17,7 @@ body{
 
 #restaurant_name{
     text-align: left;
-    font-size: 30;
+    font-size: 3vw;
     color: #ffe6b7;
     grid-area: restaurant_name;
     align-self: end;
@@ -26,8 +26,8 @@ body{
 
 .tab{
     text-align: left;
-    font-size: 15;
-    color: white;
+    font-size: 1.5vw;
+    color: #eee;
     align-self: end;
 }
 .tab:hover{
@@ -54,20 +54,48 @@ body{
 
 #slogan{
     margin-top: 4.5vw;
+    margin-bottom: 18vw;
     text-align: left;
     position: relative;
     font-size: 7.8vw;
     width: 50%;
-    color: white;
+    color: #eee;
     z-index: 1;
 }
 
-#footer{
-    margin-top: 14vw;
+.text_container{
+    margin-right: 25%;
+    margin-left: 25%;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    z-index: 1;
     position: relative;
-    color: white;
-    /* bottom: 0; */
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    height: 5.55vw;
+    color: #222;
+    width: 50%;
+}
+
+.container_title{
+    text-align: center;
+    padding-bottom: 1vw;
+    font-size: 3vw;
+}
+
+.container_text{
+    font-size: 1.5vw;    
+}
+
+#menu_container{
+    padding-top: 75vw;
+}
+
+#events_container {
+    padding-top: 75vw;
+}
+
+#events_title {
+    padding-top: 5vw;
+}
+
+#footerimage{
+    
 }
