@@ -1,6 +1,6 @@
 function load_initial_page(){
     let contentBody = document.getElementById("content");
-    
+
     // Add image
     let img = document.createElement('img');
     img.src = "./assets/kaboompics_Bourbon Glazed Salmon.jpeg";
@@ -28,6 +28,7 @@ function load_initial_page(){
     create_tab('tab1', 'MENU');
     create_tab('tab2', 'CONTACT');
     create_tab('tab3', 'RESERVATIONS');
+    create_tab('tab4', 'ABOUT US');
 
     // add slogan text
     let slogan = document.createElement('div');
@@ -38,17 +39,14 @@ function load_initial_page(){
     // add aboutus container + children
     let aboutus_container = document.createElement('div');
     aboutus_container.setAttribute('class','text_container');
+    aboutus_container.setAttribute('id','aboutus_container');
     contentBody.appendChild(aboutus_container);
     
     let aboutus_title = document.createElement('div');
     aboutus_title.innerHTML = "ABOUT US";
     aboutus_title.setAttribute('class','container_title');
+    aboutus_title.setAttribute('id','aboutus_title');
     aboutus_container.appendChild(aboutus_title);
-
-    let aboutus_text = document.createElement('div');
-    aboutus_text.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    aboutus_text.setAttribute('class','container_text');
-    aboutus_container.appendChild(aboutus_text);
 
     // menu image
     let menuImage = document.createElement('img');
@@ -65,46 +63,26 @@ function load_initial_page(){
     let menu_title = document.createElement('div');
     menu_title.innerHTML = "MENU";
     menu_title.setAttribute('class','container_title');
+    menu_title.setAttribute('id', 'menu_title');
     menu_container.appendChild(menu_title);
 
-    let menu_text = document.createElement('div');
-    menu_text.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    menu_text.setAttribute('class', 'container_text');
-    menu_container.appendChild(menu_text);
-
     // events/reservations image
-    let eventsImage = document.createElement('img');
-    eventsImage.src = "./assets/kaboompics_People holding glasses of white wine making a toast.jpeg";
-    eventsImage.classList.add('mainbodyimage');
-    contentBody.appendChild(eventsImage);
+    let reservationsImage = document.createElement('img');
+    reservationsImage.src = "./assets/kaboompics_People holding glasses of white wine making a toast.jpeg";
+    reservationsImage.classList.add('mainbodyimage');
+    contentBody.appendChild(reservationsImage);
 
     // add events/reservations container + children
-    let events_container = document.createElement('div');
-    events_container.setAttribute('class','text_container');
-    events_container.setAttribute('id', 'events_container');
-    contentBody.appendChild(events_container);
+    let reservations_container = document.createElement('div');
+    reservations_container.setAttribute('class','text_container');
+    reservations_container.setAttribute('id', 'reservations_container');
+    contentBody.appendChild(reservations_container);
 
     let reservations_title = document.createElement('div');
     reservations_title.innerHTML = "RESERVATIONS";
     reservations_title.setAttribute('class','container_title');
-    events_container.appendChild(reservations_title);
-
-    let reservations_text = document.createElement('div');
-    reservations_text.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    reservations_text.setAttribute('class', 'container_text');
-    events_container.appendChild(reservations_text);
-
-    let events_title = document.createElement('div');
-    events_title.innerHTML = "EVENTS";
-    events_title.setAttribute('class','container_title');
-    events_title.setAttribute('id','events_title');
-    events_container.appendChild(events_title);
-
-    let events_text = document.createElement('div');
-    events_text.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-    events_text.setAttribute('class', 'container_text');
-    events_container.appendChild(events_text);
-
+    reservations_title.setAttribute('id','reservations_title');
+    reservations_container.appendChild(reservations_title);
 
     // Footer image
     let footerImage = document.createElement('img');
@@ -117,12 +95,19 @@ function load_initial_page(){
     let contact_container = document.createElement('div');
     contact_container.setAttribute('id','contact_container');
     contentBody.appendChild(contact_container);
+    
+    let contact_title = document.createElement('div');
+    contact_title.innerHTML = "CONTACT US";
+    contact_title.setAttribute('class','container_title');
+    contact_title.setAttribute('id','contact_title');
+    contact_container.appendChild(contact_title);
+
 
     // function to create each contact child
     function createContactDiv(city, street, state, zipcode, phoneNumber){
         let contact = document.createElement('div');
         contact.setAttribute('class', 'contact_text');
-        contact.innerHTML = city + '\n' + street + '\n' + city + ', ' + state + ', ' + zipcode + '\n' + phoneNumber;
+        contact.innerHTML = city + ':\n' + street + '\n' + city + ', ' + state + ', ' + zipcode + '\n' + phoneNumber;
         contact_container.appendChild(contact);
     }
     createContactDiv('Brookyln', '1054 Anmoore Road', 'NY', '11201', '(718) 797-7239');
@@ -136,4 +121,4 @@ function load_initial_page(){
 };
 
 
-export default load_initial_page();
+export default load_initial_page;

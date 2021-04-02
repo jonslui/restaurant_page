@@ -6,13 +6,11 @@ body{
 
 #header_container{
     background-color: rgba(0, 0, 0, 0.1);
-    position: fixed;
-    padding-top: 1vw;
-    /* padding-left: 10px; */
-    display: grid;
-    grid-template-areas: "restaurant_name . . . . . . . tab1 tab2 tab3";
-    z-index: 1;
     position: relative;
+    padding-top: 1vw;
+    display: grid;
+    grid-template-areas: "restaurant_name . . . . . . tab1 tab2 tab3 tab4";
+    z-index: 1;
 }
 
 #restaurant_name{
@@ -25,6 +23,7 @@ body{
 }
 
 .tab{
+    cursor: pointer;
     text-align: left;
     font-size: 1.5vw;
     color: #eee;
@@ -43,6 +42,9 @@ body{
 }
 #tab3{
     grid-area: tab3;
+}
+#tab4{
+    grid-area: tab4;
 }
 
 .mainbodyimage{
@@ -64,19 +66,20 @@ body{
 }
 
 .text_container{
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 15%;
+    margin-left: 15%;
     padding-top: 10vw;
     padding-bottom: 10vw;
     z-index: 1;
     position: relative;
     color: #222;
-    width: 50%;
+    width: 70%;
 }
 
 .container_title{
+    cursor: pointer;
     text-align: center;
-    padding-bottom: 1vw;
+    /* padding-bottom: 1vw; */
     font-size: 3vw;
 }
 
@@ -88,28 +91,28 @@ body{
     padding-top: 75vw;
 }
 
-#events_container {
+#reservations_container {
     padding-top: 75vw;
 }
 
-#events_title {
-    padding-top: 5vw;
+#contact_title{
+    grid-column: 1/5;
+    padding-bottom: 2vw;
 }
 
 #contact_container{
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 12%;
+    margin-left: 12%;
     padding-top: 2vw;
     z-index: 1;
     position: relative;
     font-size: 1.5vw;
     display: grid;
-    text-align: left;
+    text-align: center;
     grid-template-columns: auto auto auto auto;
     color: #eee;
 }
 
 .contact_text{
     white-space: pre-line;
-    padding-left: 5vw;
 }
