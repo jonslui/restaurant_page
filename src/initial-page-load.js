@@ -98,7 +98,6 @@ function load_initial_page(){
     
     let contact_title = document.createElement('div');
     contact_title.innerHTML = "CONTACT US";
-    contact_title.setAttribute('class','container_title');
     contact_title.setAttribute('id','contact_title');
     contact_container.appendChild(contact_title);
 

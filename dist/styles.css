@@ -79,16 +79,52 @@ body{
 .container_title{
     cursor: pointer;
     text-align: center;
-    /* padding-bottom: 1vw; */
     font-size: 3vw;
+}
+.container_title:hover {
+    opacity: 0.8;
 }
 
 .container_text{
-    font-size: 1.5vw;    
+    font-size: 1.5vw;
+    padding-top: 1vw;    
 }
 
 #menu_container{
     padding-top: 75vw;
+}
+
+#menu_items_container{
+    padding-left: 2vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    color: #222;
+}
+.menu_subtitle{
+    grid-column: 1/4;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 2vw;
+    text-decoration: underline;
+}
+
+.dish{
+    padding-right: 2vw;
+}
+.dish_name{
+    font-size: 1.5vw;
+    font-style: bold;
+}
+.dish_description{
+    white-space: pre-line;
+    font-size: 1vw;
+    font-style: italic;
+}
+.dish_price{
+    font-size: 1vw;
+    padding-bottom: 2vw;
+    /* font-style: italic; */
 }
 
 #reservations_container {
@@ -98,6 +134,8 @@ body{
 #contact_title{
     grid-column: 1/5;
     padding-bottom: 2vw;
+    text-align: center;
+    font-size: 3vw;
 }
 
 #contact_container{
