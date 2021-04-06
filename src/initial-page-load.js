@@ -7,8 +7,8 @@ function load_initial_page(){
     img.classList.add("mainbodyimage");
     contentBody.appendChild(img);
 
-    // add header container + title/tabs
-    let header_container = document.createElement('div');
+    // add header container + title (tabs are created at bottom of function)
+    let header_container = document.createElement('nav');
     header_container.setAttribute('id', 'header_container');
     contentBody.appendChild(header_container);
 
@@ -16,19 +16,6 @@ function load_initial_page(){
     restaurant_name.innerHTML = 'THE CITRUS BAR';
     restaurant_name.setAttribute('id', 'restaurant_name');
     header_container.appendChild(restaurant_name);
-
-    // function to create tabs
-    function create_tab(id, text){
-        let tab = document.createElement('div');
-        tab.innerHTML = text;
-        tab.setAttribute('id', id);
-        tab.setAttribute('class', 'tab');
-        header_container.appendChild(tab);
-    }
-    create_tab('tab1', 'MENU');
-    create_tab('tab2', 'CONTACT');
-    create_tab('tab3', 'RESERVATIONS');
-    create_tab('tab4', 'ABOUT US');
 
     // add slogan text
     let slogan = document.createElement('div');
@@ -101,7 +88,6 @@ function load_initial_page(){
     contact_title.setAttribute('id','contact_title');
     contact_container.appendChild(contact_title);
 
-
     // function to create each contact child
     function createContactDiv(city, street, state, zipcode, phoneNumber){
         let contact = document.createElement('div');
@@ -117,6 +103,22 @@ function load_initial_page(){
     hours.setAttribute('class', 'contact_text');
     hours.innerHTML = 'Monday - Thursday:' + '\n' + '8am - 11pm' + '\n' + 'Friday - Sunday' + '\n' + '11am - 11pm';
     contact_container.appendChild(hours);
+
+
+
+    // Create tabs and link them too divs with smooth-scrolling
+    function create_tab(id, href_value, text){
+        let tab = document.createElement('a');
+        tab.innerHTML = text;
+        tab.setAttribute('id', id);
+        tab.href = href_value;
+        tab.setAttribute('class', 'tab');
+        header_container.appendChild(tab);
+    }
+    create_tab('tab1', '#menu_title', 'MENU');
+    create_tab('tab2', '#contact_title', 'CONTACT');
+    create_tab('tab3', '#reservations_title', 'RESERVATIONS');
+    create_tab('tab4', '#aboutus_title', 'ABOUT US');
 };
 
 

@@ -25,3 +25,4 @@ function add_nav_events(){
 load_inital_page();
 add_nav_events();
 
+
