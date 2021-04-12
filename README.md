@@ -2,6 +2,9 @@
 
 The goal behind creating this mock restaurant page was to practice using webpack/modules and practice building pages with javascript/tabs.
 
+## Demo video
+![restaurant_page_demo](https://user-images.githubusercontent.com/34390833/114431427-b895b100-9b7c-11eb-810d-843ba144e4c1.gif)
+
 ## Usage
 
 1. Download all files inside the repository.
